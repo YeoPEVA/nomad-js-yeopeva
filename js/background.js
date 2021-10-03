@@ -10,8 +10,12 @@ const chosenImage = images[Math.floor(Math.random() * images.length)];
 // bgImage.src = `img/${chosenImage}`;
 // document.body.appendChild(bgImage);
 
-let my_style = document.createElement("style");
- 
-my_style.innerHTML =
-    "body{ background-image: url(" + '"img/' + chosenImage + '"'+ ");}"; 
-document.head.appendChild(my_style);
+function changeBack(){
+	let my_style = document.createElement("style");
+	my_style.innerHTML = "body{ background-image: url(" + '"img/' + chosenImage + '"'+ ");}"; 
+	document.head.appendChild(my_style);
+}
+
+window.onload = function() {                         
+              changeBack();
+}
